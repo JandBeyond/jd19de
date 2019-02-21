@@ -1,0 +1,77 @@
+// colors
+
+$jd19de-red:        #ff5959;
+$jd19de-orange:     #ffad5a;
+$jd19de-blue:       #4f9da6;
+$jd19de-darkblue:   #1a0841;
+
+
+
+// fonts
+
+// @import url('https://fonts.googleapis.com/css?family=Poppins|Sintony');
+@import url(https://fonts.googleapis.com/css?family=Roboto+Mono|Rubik:700);
+
+
+
+// html selectors
+
+body {
+    font-family: 'Roboto Mono', monospace;
+    font-size: 14px;
+    font-weight: 400;
+    letter-spacing: 0;
+    line-height: 30px;
+    overflow-x: hidden;
+}
+
+img {
+    max-width: 100%;
+}
+
+a {
+  text-decoration: none;
+  transition: 0.3s all ease;
+  color: #cdcdcd;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: 'Rubik', sans-serif;
+  font-weight: 700;
+  letter-spacing: 0;
+  text-transform: uppercase;
+}
+
+
+
+// helpers
+
+.wrap-inside {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+
+
+// gradients
+
+@mixin gradient-red {
+  background: $jd19de-red;
+  background: -moz-linear-gradient(45deg, $jd19de-red 0%, #ff8787 100%);
+  background: -webkit-linear-gradient(45deg, $jd19de-red 0%,#ff8787 100%);
+  background: linear-gradient(45deg, $jd19de-red 0%,#ff8787 100%);
+  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='$jd19de-red', endColorstr='#ff8787',GradientType=1 );
+}
+
+@mixin gradient-darkblue {
+  background: $jd19de-darkblue;
+  background: -moz-linear-gradient(45deg, $jd19de-darkblue 0%, $jd19de-blue 100%);
+  background: -webkit-linear-gradient(45deg, $jd19de-darkblue 0%,$jd19de-blue 100%);
+  background: linear-gradient(45deg, $jd19de-darkblue 0%,$jd19de-blue 100%);
+  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='$jd19de-darkblue', endColorstr='$jd19de-blue',GradientType=1 );
+}
