@@ -85,6 +85,7 @@ footer {
     //   border-color: lighten($jd19de-blue, 35%);
     //   color: $jd19de-darkblue;
     // }
+
     @include button(lighten($jd19de-blue, 35%), $jd19de-darkblue, 'auto', 'transparent');
   }
 
