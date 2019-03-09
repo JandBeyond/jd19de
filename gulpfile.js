@@ -4,6 +4,8 @@ const uglify = require('gulp-uglify');
 const concat = require('gulp-concat');
 const sass = require('gulp-sass');
 const cleanCSS = require('gulp-clean-css');
+const autoprefixer = require('gulp-autoprefixer');
+const sourcemaps = require('gulp-sourcemaps');
 const browserSync = require('browser-sync').create();
 const zip = require('gulp-zip');
 
@@ -16,7 +18,10 @@ gulp.task('files', function() {
 // SASS
 gulp.task('sass', function() {
     return gulp.src('css/template.scss')
+        .pipe(sourcemaps.init())
         .pipe(sass({ outputStyle: 'compressed' }))
+        .pipe(autoprefixer())
+        .pipe(sourcemaps.write())
         .pipe(gulp.dest('css'));
 });
 
@@ -26,8 +31,10 @@ gulp.task('css', function() {
             'css/normalize.css',
             'css/template.css'
         ])
+        .pipe(sourcemaps.init())
         .pipe(concat('style.css'))
         .pipe(cleanCSS())
+        .pipe(sourcemaps.write())
         .pipe(gulp.dest('build'))
         .pipe(browserSync.stream());
 });
@@ -38,8 +45,10 @@ gulp.task('js', function() {
             'js/particles.js',
             'js/script.js'
         ])
+        .pipe(sourcemaps.init())
         .pipe(uglify())
         .pipe(concat('app.js'))
+        .pipe(sourcemaps.write())
         .pipe(gulp.dest('build'))
         .pipe(browserSync.stream());
 });

@@ -1,0 +1,49 @@
+// intro
+
+// .intro {display: none !important;}
+
+.intro {
+  text-align: center;
+  margin-bottom: 10px;
+  height: 100vh;
+  display: flex;
+  color: white;
+
+  justify-content: center;
+  align-items: center;
+  min-height: 600px;
+  margin-top: -60px;
+  margin-bottom: 60px;
+
+  h1,
+  h2,
+  h3 {
+    color: white;
+  }
+
+  h3 {
+    font-size: 1.2em;
+    line-height: 1.0em;
+  }
+
+  .button {
+    display: inline-block;
+    border: 2px dotted white;
+    color: white;
+    padding: 6px 16px;
+    margin-top: 20px;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    &:hover {
+      background-color: white;
+      border-color: $jd19de-blue;
+      color: $jd19de-blue;
+    }
+  }
+
+  .arrow {
+    font-size: 52px;
+    display: inline-block;
+    margin-top: 40px;
+  }
+}

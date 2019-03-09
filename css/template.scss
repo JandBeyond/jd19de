@@ -1,5 +1,9 @@
 // JD19DE
 
+// mixins
+@import 'scss/mixins/button';
+
+// main
 @import 'scss/variables';
 @import 'scss/menu';
 @import 'scss/main';
@@ -7,29 +11,19 @@
 @import 'scss/footer';
 @import 'scss/particles';
 
+// sections
+@import 'scss/intro';
+@import 'scss/overlay';
 
-main {
-  display: none;
-}
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+// pages
+@import 'scss/home';
+@import 'scss/location';
+@import 'scss/speaker';
+@import 'scss/callforpapers';
+@import 'scss/sponsors';
+@import 'scss/banners';
+@import 'scss/jotto';
+@import 'scss/impress';
+@import 'scss/privacy';
+@import 'scss/contact';
+@import 'scss/news';

@@ -2,8 +2,10 @@
 // https://github.com/VincentGarreau/particles.js/
 
 #particles-nav {
+  @include gradient-blue;
   position: relative;
   width: 100%;
+  min-height: 100vh;
   // background-image: url("");
   background-repeat: no-repeat;
   background-size: cover;

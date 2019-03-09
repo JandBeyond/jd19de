@@ -1,9 +1,9 @@
 
 footer {
-  @include gradient-darkblue;
+
   color: lighten($jd19de-blue, 35%);
   position: relative;
-  z-index: 1;
+  z-index: 2;
 
   h3 {
     font-size: 24px;
@@ -70,20 +70,22 @@ footer {
   }
 
   input[type="submit"] {
-    background: 0 none;
-    border: 2px dotted lighten($jd19de-blue, 35%);
-    color: lighten($jd19de-blue, 35%);
-    width: 100%;
-    padding: 5px;
-    cursor: pointer;
-    letter-spacing: 2px;
-    text-transform: uppercase;
-    &:hover,
-    &:focus {
-      background-color: lighten($jd19de-blue, 35%);
-      transition: background-color 300ms linear;
-      color: $jd19de-darkblue;
-    }
+    // background: 0 none;
+    // border: 2px dotted lighten($jd19de-blue, 35%);
+    // color: lighten($jd19de-blue, 35%);
+    // width: 100%;
+    // padding: 5px;
+    // cursor: pointer;
+    // letter-spacing: 2px;
+    // text-transform: uppercase;
+    // &:hover,
+    // &:focus {
+    //   transition: all 300ms linear;
+    //   background-color: lighten($jd19de-blue, 35%);
+    //   border-color: lighten($jd19de-blue, 35%);
+    //   color: $jd19de-darkblue;
+    // }
+    @include button(lighten($jd19de-blue, 35%), $jd19de-darkblue, 'auto', 'transparent');
   }
 
   #social_media img {

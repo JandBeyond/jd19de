@@ -4,7 +4,7 @@
   nav {
     height: 0;
     position: relative;
-    z-index: 2;
+    z-index: 3;
   }
 
   #mainMenu {
@@ -12,9 +12,9 @@
     position: relative;
     top: 25px;
     left: 25px;
-    z-index: 1;
+    z-index: 3;
     -webkit-user-select: none;
-      user-select: none;
+    user-select: none;
   }
 
   #mainMenu input {
@@ -30,94 +30,75 @@
     -webkit-touch-callout: none;
   }
 
-  #mainMenu span
-  {
+  #mainMenu span {
     display: block;
     width: 33px;
     height: 4px;
     margin-bottom: 5px;
     position: relative;
-
-    background: #cdcdcd;
+    background: white;
     border-radius: 3px;
-
     z-index: 1;
-
     transform-origin: 4px 0px;
-
     transition: transform 0.5s cubic-bezier(0.77,0.2,0.05,1.0),
                 background 0.5s cubic-bezier(0.77,0.2,0.05,1.0),
                 opacity 0.55s ease;
   }
 
-  #mainMenu span:first-child
-  {
+  #mainMenu span:first-child {
     transform-origin: 0% 0%;
   }
 
-  #mainMenu span:nth-last-child(2)
-  {
+  #mainMenu span:nth-last-child(2) {
     transform-origin: 0% 100%;
   }
 
-  #mainMenu input:checked ~ span
-  {
+  #mainMenu input:checked ~ span {
     opacity: 1;
     transform: rotate(45deg) translate(-2px, -1px);
-    // background: #232323;
   }
 
-  #mainMenu input:checked ~ span:nth-last-child(3)
-  {
+  #mainMenu input:checked ~ span:nth-last-child(3) {
     opacity: 0;
     transform: rotate(0deg) scale(0.2, 0.2);
   }
 
-  #mainMenu input:checked ~ span:nth-last-child(2)
-  {
+  #mainMenu input:checked ~ span:nth-last-child(2) {
     transform: rotate(-45deg) translate(0, -1px);
   }
 
-  #mainMenu ul
-  {
+  #mainMenu ul {
+    @include gradient-red;
     position: absolute;
     width: 100vw;
-    // width: 300px;
     margin: -75px 0 0 -25px;
     padding: 25px;
     padding-top: 100px;
-
-    // background: #ededed;
-    // background: $jd19de-red;
-    @include gradient-red;
     list-style-type: none;
     -webkit-font-smoothing: antialiased;
     /* to stop flickering of text in safari */
-
     transform-origin: 0% 0%;
     transform: translate(-100%, 0);
-
     transition: transform 0.5s cubic-bezier(0.77,0.2,0.05,1.0);
-  }
-
-  #mainMenu li
-  {
-
-
   }
 
   #mainMenu li a {
     display: block;
     padding: 10px 0;
     font-size: 22px;
-    &:hover {
-      color: white;
-      // background-color: lighten($jd19de-red, 7%);
-      animation: glow 3s infinite;
+    letter-spacing: 1px;
+    color: white;
+  }
+
+  #mainMenu li.active {
+    background-color: white;
+    padding-left: 20px;
+    a {
+      color: $jd19de-red;
     }
   }
-  #mainMenu input:checked ~ ul
-  {
+
+  #mainMenu input:checked ~ ul {
     transform: none;
   }
 
@@ -125,82 +106,60 @@
 
 
 @media (min-width: 768px) {
-nav {
-  // background-color: $jd19de-red;
-  @include gradient-red;
+  nav {
 
-  position: relative;
-  z-index: 2;
-
-  input,
-  span {
-    display: none;
-  }
-
-  ul {
     position: relative;
-    z-index: 2;
-    margin: 0;
-    padding: 0;
-    list-style: none;
-    @media (min-width: 768px) {
-      display: flex;
-      flex-wrap: wrap;
-      max-width: 100vw;
+    z-index: 3;
+
+    input,
+    span {
+      display: none;
     }
 
-    li {
+    ul {
+      position: relative;
+      z-index: 2;
+      margin: 0;
+      padding: 0;
+      list-style: none;
       @media (min-width: 768px) {
         display: flex;
-        align-items: center;
-        justify-content: center;
-        width: 14.28%;
-        overflow: hidden;
+        flex-wrap: wrap;
+        max-width: 100vw;
       }
-      a {
-        display: block;
-        // padding: 5vw 5vw;
-        color: lighten($jd19de-red, 22%);
+
+      li {
         @media (min-width: 768px) {
-          // padding: 25px 20px;
-          padding: 10px;
-          text-align: center;
           display: flex;
-          flex-wrap: wrap;
-          height: 100%;
-          width: 100%;
-          justify-content: center;
           align-items: center;
+          justify-content: center;
+          width: 14.28%;
+          overflow: hidden;
         }
-        &:hover {
-          background-color: lighten($jd19de-red, 17%);
-          color: darken($jd19de-red, 47%);
+        a {
+          display: block;
+          color: white;
+          @media (min-width: 768px) {
+            padding: 10px;
+            text-align: center;
+            text-transform: uppercase;
+            display: flex;
+            flex-wrap: wrap;
+            height: 100%;
+            width: 100%;
+            justify-content: center;
+            align-items: center;
+          }
+          &:hover {
+            background-color: white;
+            color: $jd19de-blue;
+          }
         }
-      }
-      &.active:not(.item-101) a {
-        color: white;
-        background-color: lighten($jd19de-red, 17%);
+        &.active:not(.item-101) a {
+          background-color: white;
+          color: $jd19de-blue;
+        }
       }
     }
   }
 }
-}
-
-// @keyframes glow {
-//   0% {
-//     text-shadow:  0 0 10px white;
-//   }
-//   15% {
-//     text-shadow: 2px 2px 10px rgba(255, 255, 255, 1),
-//                  -2px -2px 10px rgba(255, 255, 255, 1);
-//   }
-//   30% {
-//     text-shadow: 2px 2px 4px rgba(255, 255, 255, .7),
-//                  -2px -2px 4px rgba(255, 255, 255, .7);
-//   }
-//   50% {
-//     text-shadow: 20px 20px 50px rgba(255, 255, 255, .5),
-//                  -20px -20px 50px rgba(255, 255, 255, .5);
-//   }
-// }
-

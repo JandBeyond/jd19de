@@ -12,36 +12,76 @@ JHtml::stylesheet(Juri::base() . 'templates/'.$this->template.'/build/style.css'
 </head>
 
 <body class="jd19de <?php echo $active->alias . ' ' . $pageclass; ?>">
+  <div id="particles-nav">
 
-  <nav role="navigation">
-    <div id="mainMenu" class="wrap-inside">
-      <input type="checkbox" />
-      <span></span>
-      <span></span>
-      <span></span>
-      <jdoc:include type="modules" name="menu" />
-    </div>
-  </nav>
+    <nav role="navigation">
+      <div id="mainMenu" class="wrap-inside">
+        <input type="checkbox" />
+        <span></span>
+        <span></span>
+        <span></span>
+        <jdoc:include type="modules" name="menu" />
+      </div>
+    </nav>
 
-  <header>
-    <div class="wrap-inside">
-      <jdoc:include type="modules" name="header" />
-    </div>
-  </header>
+    <header>
+      <div class="wrap-inside">
+        <jdoc:include type="modules" name="header" />
+      </div>
+    </header>
 
-  <main>
-    <div class="wrap-inside">
-      <jdoc:include type="message" />
-      <jdoc:include type="component" />
-    </div>
-  </main>
+    <main>
+      <div class="wrap-inside">
+        <?php if ($this->countModules( 'intro' )) : ?>
+          <section class="intro">
+            <jdoc:include type="modules" name="intro" />
+          </section>
+        <?php endif; ?>
 
-  <footer id="particles-nav" >
-    <div class="wrap-inside">
-      <jdoc:include type="modules" name="footer" style="xhtml" />
-    </div>
-  </footer>
+        <?php if (
+          $this->countModules('top_a') ||
+          $this->countModules('top_b') ||
+          $this->countModules('top_c')
+        ) : ?>
+          <section id="top">
+            <jdoc:include type="modules" name="top_a" />
+            <jdoc:include type="modules" name="top_b" />
+            <jdoc:include type="modules" name="top_c" />
+          </section>
+        <?php endif; ?>
 
+        <div class="main-content">
+          <article>
+            <jdoc:include type="message" />
+            <jdoc:include type="component" />
+          </article>
+
+          <aside>
+            <jdoc:include type="modules" name="sidebar" />
+          </aside>
+        </div>
+
+        <?php if (
+          $this->countModules('bottom_a') ||
+          $this->countModules('bottom_b') ||
+          $this->countModules('bottom_c')
+        ) : ?>
+          <section id="bottom">
+            <jdoc:include type="modules" name="bottom_a" />
+            <jdoc:include type="modules" name="bottom_b" />
+            <jdoc:include type="modules" name="bottom_c" />
+          </section>
+        <?php endif; ?>
+      </div>
+    </main>
+
+    <footer>
+      <div class="wrap-inside">
+        <jdoc:include type="modules" name="footer" style="xhtml" />
+      </div>
+    </footer>
+
+  </div>
 </body>
 
 </html>

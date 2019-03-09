@@ -1,27 +1,30 @@
 // colors
 
-$jd19de-red:        #ff5959;
-$jd19de-orange:     #ffad5a;
-$jd19de-blue:       #4f9da6;
-$jd19de-darkblue:   #1a0841;
+$jd19de-red:                #ff5959;
+$jd19de-orange:             #ffad5a;
+$jd19de-blue:               #4f9da6;
+$jd19de-darkblue:           #1a0841;
+$jd19de-transparent-white:  rgba(255,255,255,0.95);
 
 
 
 // fonts
 
 // @import url('https://fonts.googleapis.com/css?family=Poppins|Sintony');
-@import url(https://fonts.googleapis.com/css?family=Roboto+Mono|Rubik:700);
+// @import url(https://fonts.googleapis.com/css?family=Roboto+Mono|Rubik:700);
+// @import url('https://fonts.googleapis.com/css?family=Playfair+Display|Source+Sans+Pro');
+@import url('https://fonts.googleapis.com/css?family=Elsie|Roboto');
 
 
 
 // html selectors
 
 body {
-    font-family: 'Roboto Mono', monospace;
+    font-family: 'Roboto', sans-serif;
     font-size: 14px;
     font-weight: 400;
     letter-spacing: 0;
-    line-height: 30px;
+    line-height: 24px;
     overflow-x: hidden;
 }
 
@@ -41,10 +44,25 @@ h3,
 h4,
 h5,
 h6 {
-  font-family: 'Rubik', sans-serif;
-  font-weight: 700;
+  font-family: 'Elsie', cursive;
+  font-weight: 400;
   letter-spacing: 0;
-  text-transform: uppercase;
+  // text-transform: uppercase;
+}
+
+h1 {
+  font-size: 2.4em;
+  line-height: 2.1em;
+}
+
+h2 {
+  font-size: 1.8em;
+  line-height: 1.4em;
+}
+
+h3 {
+  font-size: 1.8em;
+  line-height: 1.4em;
 }
 
 
@@ -68,7 +86,7 @@ h6 {
   filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='$jd19de-red', endColorstr='#ff8787',GradientType=1 );
 }
 
-@mixin gradient-darkblue {
+@mixin gradient-blue {
   background: $jd19de-darkblue;
   background: -moz-linear-gradient(45deg, $jd19de-darkblue 0%, $jd19de-blue 100%);
   background: -webkit-linear-gradient(45deg, $jd19de-darkblue 0%,$jd19de-blue 100%);

@@ -1,6 +1,32 @@
 // main
 
 main {
-    background-color: $jd19de-blue;
-    padding: 5vw;
+  position: relative;
+  z-index: 2;
+  width: 100%;
+  margin-top: 70px;
+
+  aside {
+    margin-bottom: 60px;
+  }
+}
+
+.main-content {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: stretch;
+}
+
+@media screen and (min-width: 960px) {
+  main {
+    article {
+      width: calc(66.6% - 10px);
+    }
+
+    aside {
+      width: calc(33.4% - 10px);
+
+    }
+  }
 }
