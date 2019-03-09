@@ -27,18 +27,7 @@
   }
 
   .button {
-    display: inline-block;
-    border: 2px dotted white;
-    color: white;
-    padding: 6px 16px;
-    margin-top: 20px;
-    text-transform: uppercase;
-    letter-spacing: 1px;
-    &:hover {
-      background-color: white;
-      border-color: $jd19de-blue;
-      color: $jd19de-blue;
-    }
+    @include button(white, $jd19de-blue, 'auto', 'transparent');
   }
 
   .arrow {

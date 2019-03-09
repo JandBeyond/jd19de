@@ -1,7 +1,6 @@
-# [BL4NK](http://blank.vc)
+# JD19DE
 
-Light, powerful and free template for Joomla!™
-for faster and easier web development.
+Main template of JoomlaDay™ Germany 2019 in Gießen.
 
 ## How to use
 
