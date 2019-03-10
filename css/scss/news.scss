@@ -12,21 +12,28 @@ body.aktuelles {
       margin: -10px -40px 40px -60px;
     }
   }
-  .blog .item {
+}
 
-  }
-  .pagination ul li {
-    margin: 10px 5px;
+.blog .item {
+  background: #fff;
+  padding: 10px;
+  margin-bottom: 10px;
+}
 
-    a.pagenav {
-      background-color: $jd19de-orange;
-      border-color: $jd19de-orange;
-      color: white;
-      text-decoration: none;
-      &:hover {
-        background-color: $jd19de-red;
-        border-color: $jd19de-red;
-      }
-    }
-  }
+.blog .item .item-image img {
+  width: calc(100% + 20px);
+  margin-left: -10px;
+  margin-top: -10px;
+  height: auto;
+  display: block;
+}
+
+.blog .item p.readmore {
+  text-align: center;
+  width: 100%;
+  margin: 0px;
+}
+
+.blog .item .page-header {
+  color: $jd19de-blue;
 }

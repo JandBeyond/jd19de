@@ -83,73 +83,9 @@
   margin: 0px;
 }
 
-.blog .item {
-  background: #fff;
-  padding: 10px;
-  margin-bottom: 10px;
-}
 
-.blog .item .item-image img {
-  width: calc(100% + 20px);
-  margin-left: -10px;
-  margin-top: -10px;
-  height: auto;
-  display: block;
-}
 
-.blog .item p.readmore {
-  text-align: center;
-  width: 100%;
-  margin: 0px;
-}
 
-.blog .item .page-header {
-  color: $jd19de-blue;
-}
-
-.blog .pagination {
-  text-align: center;
-}
-
-.blog .pagination ul {
-  padding: 0px;
-  list-style: none;
-  display: flex;
-  justify-content: center;
-  flex-wrap: wrap;
-}
-
-.blog .pagination ul li {
-  display: block;
-  width: auto;
-  margin: 0px 5px;
-}
-
-.blog .pagination ul li.pagination-start,
-.blog .pagination ul li.pagination-end,
-.blog .pagination .counter {
-  display: none;
-}
-
-.blog .pagination ul li a,
-.blog .pagination ul li span {
-  padding: 5px 10px;
-  background: #fff;
-  color: $jd19de-blue;
-  border: 1px solid #fff;
-  transition: all 0.2s;
-}
-
-.blog .pagination ul li a {
-  background: #06e8ff;
-  border: 1px solid #06e8ff;
-}
-
-.blog .pagination ul li a:hover {
-  background: white;
-  color: $jd19de-blue;
-  text-decoration: none;
-}
 
 @media screen and (min-width:768px) {
   .bloglandingpage .items-row {
