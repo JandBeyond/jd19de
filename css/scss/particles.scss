@@ -11,8 +11,12 @@
   background-size: cover;
   background-position: 50% 50%;
   canvas {
+    display: none;
     position: absolute;
     top: 0;
     z-index: 1;
+    @media screen and (min-width:768px) {
+      display: block;
+    }
   }
 }

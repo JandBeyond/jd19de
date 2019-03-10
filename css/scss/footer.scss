@@ -69,6 +69,10 @@ footer {
     }
   }
 
+  ::placeholder {
+    color: lighten($jd19de-blue, 35%);
+  }
+
   input[type="submit"] {
     @include button(lighten($jd19de-blue, 35%), $jd19de-darkblue, 'auto', 'transparent');
     width: 100%;

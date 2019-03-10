@@ -14,9 +14,6 @@
   @if $width == 'full' {
     text-align: center;
     width: calc(100% - 40px);
-    // @media screen and (min-width: 960px) {
-    //   // width: calc(100% - 30px);
-    // }
   } @else {
     width: auto;
   }
