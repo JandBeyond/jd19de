@@ -1,0 +1,32 @@
+// news, blog, Aktuelles ... what ever ...
+
+body.aktuelles {
+  article {
+    background-color: transparent !important;
+
+    .item-page {
+      background-color: $jd19de-transparent-white;
+    }
+
+    h2 {
+      margin: -10px -40px 40px -60px;
+    }
+  }
+  .blog .item {
+
+  }
+  .pagination ul li {
+    margin: 10px 5px;
+
+    a.pagenav {
+      background-color: $jd19de-orange;
+      border-color: $jd19de-orange;
+      color: white;
+      text-decoration: none;
+      &:hover {
+        background-color: $jd19de-red;
+        border-color: $jd19de-red;
+      }
+    }
+  }
+}

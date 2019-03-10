@@ -46,7 +46,7 @@ body:not(.landingpage) article {
     padding: 40px;
   }
 
-  a {
+  a:not(.btn) {
     color: $jd19de-blue;
     text-decoration: underline;
     &:hover {
