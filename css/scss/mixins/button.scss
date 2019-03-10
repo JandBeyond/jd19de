@@ -12,10 +12,11 @@
 
   // width
   @if $width == 'full' {
-    width: calc(100% - 20px);
-    @media screen and (min-width: 960px) {
-      width: calc(100% - 30px);
-    }
+    text-align: center;
+    width: calc(100% - 40px);
+    // @media screen and (min-width: 960px) {
+    //   // width: calc(100% - 30px);
+    // }
   } @else {
     width: auto;
   }

@@ -1,4 +1,9 @@
 // home
+//
+
+// hell yeah, I know, it's a little bit messy here,
+// but I don't have the time to clean all up. I like
+// code that works. :-) Alex
 
 .bloglandingpage {
   width: 100%;
@@ -29,14 +34,14 @@
   box-sizing: border-box;
   width: 100%;
   color: #2e2d2c;
-  padding: 0px 10px 50px 10px;
+  padding: 0px 20px 70px 20px;
   position: relative;
   height: 100%;
 }
 
 .bloglandingpage .item .item-image {
-  width: calc(100% + 20px);
-  margin-left: -10px;
+  width: calc(100% + 40px);
+  margin-left: -20px;
 }
 
 .bloglandingpage .item .item-image img {
@@ -47,16 +52,15 @@
 
 .bloglandingpage .item h2 {
   color: $jd19de-red;
-  // margin-top: 10px;
 }
 
 .bloglandingpage .item p.readmore {
   text-align: center;
-  width: calc(100% - 34px);
+  width: calc(100% - 40px);
   margin: 0px;
   position: absolute;
-  bottom: 10px;
-  left: 10px;
+  bottom: 20px;
+  left: 20px;
 }
 
 .btn {
@@ -155,12 +159,15 @@
 
 .relevant_content_box .content_container {
   box-sizing: border-box;
-  padding: 20px;
-  @media screen and (min-width:768px) {
-    padding: 40px;
-  }
-  @media screen and (min-width:960px) {
+  padding: 20px 20px 70px 20px;
+  position: relative;
+  height: 100%;
 
+  a.button {
+    position: absolute;
+    bottom: 20px;
+    left: 20px;
+    width: calc(100% - 80px);
   }
 }
 
@@ -182,7 +189,7 @@
 }
 
 .relevant_content_box .button {
-  @include button($jd19de-blue, white, 'auto', 'normal');
+  @include button($jd19de-blue, white, 'full', 'normal');
 }
 
 @media screen and (min-width:768px) {
