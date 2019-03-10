@@ -20,6 +20,12 @@
         span {
           padding: 5px 10px;
           text-decoration: none;
+          @media screen and (min-width:768px) {
+            padding: 5px 20px;
+          }
+          @media screen and (min-width:960px) {
+            padding: 9px 15px;
+          }
         }
 
         a {
@@ -42,7 +48,6 @@
     }
   }
 }
-
 
 .blog .pagination ul li.pagination-start,
 .blog .pagination ul li.pagination-end,
