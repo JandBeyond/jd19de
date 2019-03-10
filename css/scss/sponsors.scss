@@ -1,17 +1,54 @@
+// sponsors
+
+// page
+.sponsoren {
+  article {
+    h4 {
+      font-size: 1.8em;
+      line-height: 1.4em;
+      margin-top: 40px;
+      &:first-child {
+        margin-top: 20px;
+      }
+    }
+  }
+}
+
+
+// list
 .sponsorlist {
-  background-color: rgba($jd19de-blue,0.1);
+  background-color: rgba($jd19de-blue, 0.1);
   border-top: 1px solid $jd19de-blue;
   border-bottom: 1px solid $jd19de-blue;
   width: 100%;
   padding: 30px 0px;
   box-sizing: border-box;
   text-align: center;
+
   #top & {
-    background-color: rgba(white,0.1);
+    background-color: rgba(white, 0.1);
     border-top: 1px solid white;
     border-bottom: 1px solid white;
   }
+
 }
+
+.sponsor-main {
+  color: Gold;
+}
+
+.sponsor-gold {
+  color: White;
+}
+
+.sponsor-silver {
+  color: Silver;
+}
+
+.sponsor-bronze {
+  color: Grey;
+}
+
 .sponsorlist a {
   color: lighten($jd19de-blue, 35%);
   display: inline-block;
@@ -21,9 +58,6 @@
   font-size: 0.8em;
 }
 
-.sponsorlist .button {
-  // color: #014d80;
-}
 .sponsorlist ul {
   list-style: none;
   padding: 0px;
@@ -32,44 +66,38 @@
   flex-wrap: wrap;
   width: 100%;
 }
+
 .sponsorlist ul li {
   display: inline-block;
   width: 50%;
   display: flex;
   justify-content: center;
   align-items: center;
+  color: white;
   text-align: center;
   font-size: 12px;
-  color: #06e8ff;
   text-transform: uppercase;
   margin: 10px 0px;
 }
+
 .sponsorlist ul li figure {
   width: 100%;
 }
+
 .sponsorlist ul li img {
   width: 40%;
   height: auto;
   display: block;
   margin: 0px auto 10px auto;
 }
-.sponsorlist ul li h4 {
-  font-size: 12px;
-  color: #fff;
-  font-weight: 400;
-  margin: 0px;
-  line-height: 12px;
-}
+
 .sponsorlist ul li p {
   margin: 0px;
 }
-@media screen and (min-width: 768px) {
+
+@media screen and (min-width:768px) {
   .sponsorlist ul li {
     width: 25%;
-    font-size: 14px;
-    line-height: 14px;
-  }
-  .sponsorlist ul li h4 {
     font-size: 14px;
     line-height: 14px;
   }

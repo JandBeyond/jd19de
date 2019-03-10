@@ -21,11 +21,12 @@ $jd19de-transparent-white:  rgba(255,255,255,0.95);
 
 body {
     font-family: 'Roboto', sans-serif;
-    font-size: 14px;
+    font-size: 16px;
     font-weight: 400;
     letter-spacing: 0;
     line-height: 24px;
     overflow-x: hidden;
+    color: #111;
 }
 
 img {
@@ -65,7 +66,21 @@ h3 {
   line-height: 1.4em;
 }
 
+h4 {
+  font-size: 1em;
+  line-height: 0.9em;
+  margin: 0;
+}
 
+h5 {
+  font-size: 1em;
+  line-height: 0.9em;
+}
+
+hr {
+  border: 0 none;
+  border-top: 1px solid #ccc;
+}
 
 // helpers
 

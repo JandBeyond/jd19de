@@ -3,6 +3,12 @@
 JHtml::script(Juri::base() . 'templates/'.$this->template.'/build/app.js');
 JHtml::stylesheet(Juri::base() . 'templates/'.$this->template.'/build/style.css');
 
+$app = JFactory::getApplication();
+$params = $app->getParams();
+$pageclass = $params->get('pageclass_sfx');
+$menu = $app->getMenu();
+$active = $app->getMenu()->getActive();
+
 ?><!doctype html>
 <html lang="<?php echo $this->language; ?>">
 

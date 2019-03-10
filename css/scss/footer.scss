@@ -4,6 +4,7 @@ footer {
   color: lighten($jd19de-blue, 35%);
   position: relative;
   z-index: 2;
+  font-size: 14px;
 
   h3 {
     font-size: 24px;
@@ -72,6 +73,7 @@ footer {
   input[type="submit"] {
     @include button(lighten($jd19de-blue, 35%), $jd19de-darkblue, 'auto', 'transparent');
     width: 100%;
+    margin-top: 0;
   }
 
   #social_media img {

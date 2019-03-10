@@ -1,0 +1,26 @@
+// call for papers
+.call-for-papers {
+  article {
+    .conferenceplus.item {
+      padding-bottom: 60px;
+
+      >*:not(:first-child) {
+        padding-left: 40px;
+        padding-right: 40px;
+        padding-top: 8px;
+        padding-bottom: 8px;
+        margin: 0;
+      }
+
+      h2 + p {
+        margin-top: 60px !important;
+      }
+
+      .actions .btn {
+        width: auto;
+        display: inline;
+        margin: 0 10px 20px 0;
+      }
+    }
+  }
+}

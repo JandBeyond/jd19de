@@ -23,7 +23,9 @@ JFactory::getDocument()->setTitle($title);
 
 $return    = base64_decode($this->input->getBase64('return', ''));
 
-$showImg = file_exists(JPATH_SITE . $base . '/' . $item->imagefile) && is_file(JPATH_SITE . $base . '/' . $item->imagefile);
+// $showImg = file_exists(JPATH_SITE . $base . '/' . $item->imagefile) && is_file(JPATH_SITE . $base . '/' . $item->imagefile);
+
+$showImg = true;
 
 $Itemid = Conferenceplus\Route\Helper::getItemid();
 ?>

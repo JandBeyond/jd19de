@@ -1,5 +1,7 @@
 // main
 
+// general
+
 main {
   position: relative;
   z-index: 2;
@@ -8,6 +10,9 @@ main {
 
   aside {
     margin-bottom: 60px;
+    .custom {
+      margin-bottom: 20px;
+    }
   }
 }
 
@@ -18,6 +23,39 @@ main {
   align-items: stretch;
 }
 
+body:not(.landingpage) article {
+  background-color: $jd19de-transparent-white;
+  margin-bottom: 60px;
+
+  h2 {
+    margin: 0;
+    background-color: $jd19de-red;
+    color: white;
+    padding: 20px 60px;
+    margin: -10px 0 -20px -20px;
+    position: relative;
+    z-index: 2;
+  }
+
+  h3,
+  h4 {
+    color: $jd19de-red;
+  }
+
+  div[itemprop="articleBody"] {
+    padding: 40px;
+  }
+
+  a {
+    color: $jd19de-blue;
+    text-decoration: underline;
+    &:hover {
+      color: $jd19de-darkblue;
+      text-decoration: none;
+    }
+  }
+}
+
 @media screen and (min-width: 960px) {
   main {
     article {
@@ -26,7 +64,52 @@ main {
 
     aside {
       width: calc(33.4% - 10px);
-
     }
   }
+}
+
+
+
+// forms
+
+input[type="text"],
+input[type="email"],
+textarea {
+  transition: all 300ms linear;
+  border: 2px solid $jd19de-blue;
+  background-color: $jd19de-transparent-white;
+  color: $jd19de-blue;
+  letter-spacing: 2px;
+  margin-bottom: 5px;
+  width: calc(100% - 10px);
+  padding: 5px;
+  &:hover,
+  &:focus {
+    background-color: $jd19de-blue;
+    border-color: $jd19de-blue;
+    color: white;
+  }
+}
+
+select {
+  transition: all 300ms linear;
+  border: 2px solid $jd19de-blue;
+  width: 100%;
+  color: $jd19de-blue;
+  background-color: $jd19de-transparent-white;
+  padding: 5px;
+  box-sizing: border-box;
+  margin-bottom: 5px;
+  option {
+    font-size: 16px;
+  }
+}
+
+input[type="radio"] {
+  margin-right: 10px;
+}
+
+input[type="submit"] {
+  @include button($jd19de-blue, white, 'auto', 'normal');
+  width: 100%;
 }

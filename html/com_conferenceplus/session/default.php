@@ -42,7 +42,8 @@ $return    = base64_decode($this->input->getBase64('return', ''));
 
 		<div class="row clearfix speakerprofile">
 			<div class="col-md-4">
-				<?php if (file_exists(JPATH_SITE . $base . '/' .$speaker['imagefile']) && is_file(JPATH_SITE . $base . '/' .$speaker['imagefile'])) : ?>
+        <?php //if (file_exists(JPATH_SITE . $base . '/' .$speaker['imagefile']) && is_file(JPATH_SITE . $base . '/' .$speaker['imagefile'])) : ?>
+				<?php if (true) : ?>
 					<img class="speakerimage img-responsive img-thumbnail" src="<?php echo $base . '/' .$speaker['imagefile']; ?>"/>
 				<?php else : ?>
 					<img class="speakerimage img-responsive img-thumbnail" src="https://placeholdit.imgix.net/~text?txtsize=19&txt=200%C3%97200&w=200&h=200" />

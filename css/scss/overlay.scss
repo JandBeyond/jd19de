@@ -5,6 +5,7 @@
   position: relative;
   overflow: hidden;
 }
+
 .overlay_big img {
   filter: grayscale(1);
   z-index: 1;
@@ -15,10 +16,14 @@
   opacity: 0.9;
   border: 1px solid $jd19de-transparent-white;
   transition: all 300ms linear;
+  transform: rotateY(180deg);
+
   &:hover {
     filter: grayscale(0);
   }
+
 }
+
 .overlay_big .overlay_content {
   position: relative;
   z-index: 2;
@@ -29,9 +34,11 @@
   float: right;
   margin-top: -40px;
 }
+
 .overlay_big .overlay_content a {
   color: #fff;
 }
+
 .overlay_big .overlay_content h2,
 .overlay_big .overlay_content h3 {
   margin-top: 0px;
@@ -40,88 +47,111 @@
 .overlay_big .overlay_content {
   margin: 0px;
 
-  .button{
+  .button {
     @include button($jd19de-red, white, auto, 'invert');
   }
+
 }
 
 .overlay_big .overlay_content p:last-child {
   margin-bottom: 0px;
 }
+
 .overlay_big.right img {
   float: right;
 }
+
 .overlay_big.right .overlay_content {
   float: left;
 }
-@media screen and (min-width: 768px) {
+
+@media screen and (min-width:768px) {
   .overlay_big img {
     width: 62.5%;
   }
+
   .overlay_big .overlay_content {
     width: 62.5%;
     margin-top: -100px;
     padding: 20px;
   }
+
 }
-@media screen and (min-width: 960px) {
+
+@media screen and (min-width:960px) {
   .overlay_big .overlay_content {
     padding: 40px;
     margin-top: -470px;
   }
+
 }
+
 .overlay_small {
   overflow: hidden;
   margin-bottom: 20px;
 }
+
 .overlay_small img {
   display: none;
 }
+
 .overlay_small .overlay_content {
   background: #fff;
   padding: 10px;
   width: 100%;
   box-sizing: border-box;
 }
+
 .overlay_small .overlay_content h4 {
   margin-top: 0px;
 }
+
 .overlay_small .overlay_content .button {
   margin: 0px;
   width: 100%;
   display: block;
 }
+
 .overlay_small.blue .overlay_content {
-  background-color: rgba(255,255,255,0.95);
+  background-color: rgba(255, 255, 255, 0.95);
 }
-@media screen and (min-width: 768px) {
+
+@media screen and (min-width:768px) {
   .overlay_small {
     margin-bottom: 0px;
   }
+
   .overlay_small .overlay_content {
     padding: 20px;
   }
+
 }
-@media screen and (min-width: 960px) {
+
+@media screen and (min-width:960px) {
   .overlay_small {
     overflow: hidden;
   }
+
   .overlay_small img {
     display: block;
     float: left;
     width: 83%;
     height: auto;
   }
+
   .overlay_small .overlay_content {
     float: right;
     width: 83%;
     margin-top: -120px;
     padding: 40px;
   }
+
   .overlay_small.right img {
     float: right;
   }
+
   .overlay_small.right .overlay_content {
     float: left;
   }
+
 }

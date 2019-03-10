@@ -1,0 +1,11 @@
+// datenschutz
+body.datenschutz article{
+  div[itemprop="articleBody"] h2 {
+    margin: 0;
+    background: 0 none;
+    color: #111;
+    padding: 0;
+    position: relative;
+    z-index: 2;
+  }
+}

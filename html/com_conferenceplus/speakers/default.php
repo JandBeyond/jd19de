@@ -49,12 +49,12 @@ $odd = $itemcount % 2 != 0;
 	<?php if ($itemcount > 0)	: ?>
 		<?php for ($i = 0;$i < $itemcount; $i++) : ?>
 		<?php $item = $items[$i]; ?>
-		
+
 		<div class="col-xs-6 speakersblock">
 			<div class="col-xs-12 image">
-				<?php if(file_exists(JPATH_SITE . $base . '/' . $item->imagefile) && is_file(JPATH_SITE . $base . '/' . $item->imagefile)): ?>
+				<?php // if(file_exists(JPATH_SITE . $base . '/' . $item->imagefile) && is_file(JPATH_SITE . $base . '/' . $item->imagefile)): ?>
 				<img src="<?php echo $base . '/' . $item->imagefile; ?>" class="img-responsive maxheight" />
-				<?php endif; ?>
+				<?php //endif; ?>
 			</div>
 			<div class="col-xs-12 info">
 				<span class="speakername"><?php echo $item->firstname . ' ' . $item->lastname; ?><br /></span>
@@ -69,7 +69,7 @@ $odd = $itemcount % 2 != 0;
 
 		<?php endfor; ?>
 	</div>
-			
+
 	<?php else : ?>
 		<p>no speakers published</p>
 	<?php endif; ?>
