@@ -23,7 +23,7 @@ $active = $app->getMenu()->getActive();
 </head>
 
 <body class="jd19de <?php echo $active->alias . ' ' . $pageclass; ?>">
-  <div id="particles-nav">
+  <div id="background">
 
     <nav role="navigation">
       <div id="mainMenu" class="wrap-inside">
@@ -44,11 +44,11 @@ $active = $app->getMenu()->getActive();
     <main>
       <div class="wrap-inside">
         <?php if ($this->countModules( 'intro' )) : ?>
-          <section class="intro">
+          <section id="particles-nav" class="intro">
             <jdoc:include type="modules" name="intro" />
           </section>
         <?php else: ?>
-          <section class="logo">
+          <section id="particles-nav" class="logo">
             <p><a href="<?php echo Juri::base(); ?>"><img src="<?php echo Juri::base() . 'templates/'.$this->template.'/img/jd19de_logo.svg'; ?>" alt=""></a></p>
           </section>
         <?php endif; ?>

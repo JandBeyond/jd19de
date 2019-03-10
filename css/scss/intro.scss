@@ -5,13 +5,17 @@
   margin-bottom: 10px;
   height: 100vh;
   display: flex;
-  color: white;
-
   justify-content: center;
   align-items: center;
   min-height: 600px;
   margin-top: -60px;
   margin-bottom: 60px;
+  color: white;
+
+  .custom {
+    position: relative;
+    z-index: 2;
+  }
 
   h1,
   h2,
