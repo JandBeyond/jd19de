@@ -3,7 +3,6 @@
 JHtml::script(Juri::base() . 'templates/'.$this->template.'/build/app.js');
 JHtml::stylesheet(Juri::base() . 'templates/'.$this->template.'/build/style.css');
 
-
 $app = JFactory::getApplication();
 $params = $app->getParams();
 $pageclass = $params->get('pageclass_sfx');
@@ -16,7 +15,6 @@ $active = $app->getMenu()->getActive();
 <head>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1" />
   <style>
-  /*@import url('https://fonts.googleapis.com/css?family=Elsie|Roboto');*/
   @import url('https://fonts.googleapis.com/css?family=Palanquin:600|Roboto');
   </style>
   <jdoc:include type="head" />

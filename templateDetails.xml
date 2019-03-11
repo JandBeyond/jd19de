@@ -24,13 +24,15 @@
 	<files>
 		<folder>build</folder>
 		<folder>css</folder>
+		<folder>fonts</folder>
+		<folder>html</folder>
+		<folder>img</folder>
 		<folder>js</folder>
 		<filename>component.php</filename>
 		<filename>error.php</filename>
 		<filename>favicon.ico</filename>
 		<filename>gulpfile.js</filename>
     <filename>index.php</filename>
-		<filename>logic.php</filename>
 		<filename>offline.php</filename>
     <filename>package.json</filename>
 		<filename>README.md</filename>
@@ -42,7 +44,14 @@
 	<positions>
 		<position>menu</position>
 		<position>header</position>
+		<position>intro</position>
+		<position>top_a</position>
+		<position>top_b</position>
+		<position>top_c</position>
 		<position>sidebar</position>
+		<position>bottom_a</position>
+		<position>bottom_b</position>
+		<position>bottom_c</position>
 		<position>footer</position>
 		<position>debug</position>
 	</positions>
