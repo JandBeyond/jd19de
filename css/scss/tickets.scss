@@ -1,5 +1,6 @@
 // tickets
 .tickets article {
+    background: 0 none !important;
     width: calc(100% - 40px);
     @media screen and (min-width: 768px) {
         width: calc(100% - 80px);
@@ -176,11 +177,24 @@
     background-image: url("../img/joomla_signet_gold.svg");
 }
 
+.tickets .conferenceplus{
+ background-color: rgba(255, 255, 255, .95) !important;
+}
+
 .tickets .conferenceplus.item {
-    background: #fff;
+   
     width: 100%;
-    padding: 10px;
+    padding: 20px;
     box-sizing: border-box;
+    h2 {
+        margin: 0;
+        @media screen and (min-width: 768px) {
+            margin: -50px -40px -60px -60px;
+        }
+        // @media screen and (min-width:960px) {
+        //     margin: -10px 0 -20px -20px;
+        // }
+    }
 }
 
 @media screen and (min-width: 768px) {
@@ -192,13 +206,12 @@
         margin-right: 0px;
     }
     .tickets .conditions {
-        background: #fff;
         padding: 20px;
         box-sizing: border-box;
         margin-top: 20px;
     }
     .tickets .conferenceplus.item {
-        padding: 20px;
+        padding: 40px;
     }
 }
 
@@ -220,7 +233,6 @@
         margin: -20px 0px 0px -20px;
     }
     .tickets .conditions {
-        background: #fff;
         padding: 40px;
         box-sizing: border-box;
         margin-top: 40px;

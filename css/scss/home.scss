@@ -89,16 +89,6 @@
     margin: 0px;
 }
 
-// .landingpage aside .custom {
-//     @media screen and (min-width: 768px) {
-//         height: 100%;
-//         position: relative;
-//         a.button {
-//             position: absolute;
-//             bottom: 40px;
-//         }
-//     }
-// }
 .relevant_content_box {
     background: $jd19de-orange;
     width: 100%;
@@ -182,14 +172,14 @@
     .relevant_content_box .content_container {
         width: 100%;
     }
-    .relevant_content_box .content_container {
+    .landingpage .relevant_content_box .content_container {
         height: auto;
         padding-bottom: 90px;
     }
-    .relevant_content_box .image_container {
+    .landingpage .relevant_content_box .image_container {
         min-height: 205px;
     }
-    .relevant_content_box .content_container .button {
+    .landingpage .relevant_content_box .content_container .button {
         position: absolute;
         bottom: 40px;
         text-align: center;
