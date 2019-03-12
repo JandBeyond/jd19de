@@ -47,7 +47,9 @@ $active = $app->getMenu()->getActive();
           </section>
         <?php else: ?>
           <section id="particles-nav" class="logo">
-            <p><a href="<?php echo Juri::base(); ?>"><img src="<?php echo Juri::base() . 'templates/'.$this->template.'/img/jd19de_logo.svg'; ?>" alt=""></a></p>
+            <a href="<?php echo Juri::base(); ?>">
+              <jdoc:include type="modules" name="logo" />
+            </a>
           </section>
         <?php endif; ?>
 

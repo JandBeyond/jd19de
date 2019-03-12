@@ -1,0 +1,232 @@
+// tickets
+.tickets article {
+    width: calc(100% - 40px);
+    @media screen and (min-width: 768px) {
+        width: calc(100% - 80px);
+    }
+    @media screen and (min-width: 960px) {
+        width: 100%;
+    }
+}
+
+.tickets article div.clearfix {
+    display: flex;
+    justify-content: flex-start;
+    flex-wrap: wrap;
+    align-items: stretch;
+}
+
+.tickets article div.clearfix:before {
+    display: none;
+}
+
+.tickets h2 {
+    padding: 10px 20px;
+    box-sizing: border-box;
+    background: $jd19de-orange;
+    margin-bottom: 20px !important;
+    position: relative;
+    z-index: 2;
+    color: #fff;
+}
+
+.tickets a.ticket {
+    margin-top: 20px;
+    position: relative;
+    text-decoration: none !important;
+    background-color: lighten($jd19de-orange, 27%);
+    border: 2px solid transparent;
+}
+
+.tickets a.ticket:hover {
+    background-color: lighten($jd19de-orange, 18%);
+    border-color: $jd19de-orange;
+}
+
+.tickets div.ticket {
+    width: 100%;
+    padding: 10px;
+    box-sizing: border-box;
+    height: 100%;
+    text-align: center;
+    color: #212121
+}
+
+.ticket .button {
+    display: block;
+}
+
+.ticket .ticketicon {
+    height: 250px;
+    background-color: $jd19de-orange;
+    background-image: url("../img/joomla_signet_gold.svg");
+    background-repeat: repeat;
+    background-size: 40px;
+    width: calc(100% + 20px);
+    margin: -10px 0px 0px -10px;
+}
+
+.ticketfee_top {
+    display: inline-block;
+    width: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    text-align: center;
+    font-weight: 700;
+}
+
+.ticketfee_top span {
+    padding: 10px 30px;
+    margin: 0 auto;
+    background: #fff;
+    display: inline-block;
+}
+
+.ticketname,
+.ticketfee {
+    text-transform: uppercase;
+    font-weight: 700;
+    margin-bottom: 0px;
+}
+
+.ticketfee {
+    color: $jd19de-red;
+    margin-top: 0px;
+}
+
+.tickets .conditions {
+    background: #fff;
+    padding: 10px;
+    box-sizing: border-box;
+    margin-top: 10px;
+}
+
+
+/* Speacial Tickets */
+
+.ttid35 .ticketfee,
+.ttid35 .ticketname,
+.ttid35 .ticketfee_top,
+.ttid36 .ticketfee,
+.ttid36 .ticketname,
+.ttid36 .ticketfee_top,
+.ttid40 .ticketfee,
+.ttid40 .ticketname,
+.ttid40 .ticketfee_top,
+.ttid41 .ticketfee,
+.ttid41 .ticketname,
+.ttid41 .ticketfee_top,
+.ttid45 .ticketfee,
+.ttid45 .ticketname,
+.ttid45 .ticketfee_top,
+.ttid46 .ticketfee,
+.ttid46 .ticketname,
+.ttid46 .ticketfee_top,
+.ttid50 .ticketfee,
+.ttid50 .ticketname,
+.ttid50 .ticketfee_top,
+.ttid51 .ticketfee,
+.ttid51 .ticketname,
+.ttid51 .ticketfee_top,
+.ttid55 .ticketfee,
+.ttid55 .ticketname,
+.ttid55 .ticketfee_top,
+.ttid56 .ticketfee,
+.ttid56 .ticketname,
+.ttid56 .ticketfee_top,
+.ttid60 .ticketname,
+.ttid60 .ticketfee_top,
+.ttid60 .ticketfee,
+.ttid61 .ticketname,
+.ttid61 .ticketfee,
+.ttid61 .ticketfee_top,
+.ttid65 .ticketname,
+.ttid65 .ticketfee_top,
+.ttid65 .ticketfee,
+.ttid66 .ticketname,
+.ttid66 .ticketfee,
+.ttid66 .ticketfee_top,
+.ttid70 .ticketname,
+.ttid70 .ticketfee_top,
+.ttid70 .ticketfee,
+.ttid71 .ticketname,
+.ttid71 .ticketfee,
+.ttid71 .ticketfee_top {
+    color: #D4AF37;
+}
+
+.ttid35 .ticketicon,
+.ttid36 .ticketicon,
+.ttid40 .ticketicon,
+.ttid41 .ticketicon,
+.ttid45 .ticketicon,
+.ttid46 .ticketicon,
+.ttid50 .ticketicon,
+.ttid51 .ticketicon,
+.ttid55 .ticketicon,
+.ttid56 .ticketicon,
+.ttid60 .ticketicon,
+.ttid61 .ticketicon,
+.ttid65 .ticketicon,
+.ttid66 .ticketicon,
+.ttid70 .ticketicon,
+.ttid71 .ticketicon {
+    background-color: #D4AF37;
+    background-image: url("../img/joomla_signet_gold.svg");
+}
+
+.tickets .conferenceplus.item {
+    background: #fff;
+    width: 100%;
+    padding: 10px;
+    box-sizing: border-box;
+}
+
+@media screen and (min-width: 768px) {
+    .tickets a.ticket {
+        width: calc(50% - 14px);
+        margin-right: 20px;
+    }
+    .tickets a.ticket:nth-child(2n) {
+        margin-right: 0px;
+    }
+    .tickets .conditions {
+        background: #fff;
+        padding: 20px;
+        box-sizing: border-box;
+        margin-top: 20px;
+    }
+    .tickets .conferenceplus.item {
+        padding: 20px;
+    }
+}
+
+@media screen and (min-width: 960px) {
+    .tickets a.ticket {
+        width: calc(33% - 14px);
+    }
+    .tickets a.ticket:nth-child(2n) {
+        margin-right: 20px;
+    }
+    .tickets a.ticket:nth-child(3n) {
+        margin-right: 0px;
+    }
+    .tickets div.ticket {
+        padding: 20px;
+    }
+    .ticket .ticketicon {
+        width: calc(100% + 40px);
+        margin: -20px 0px 0px -20px;
+    }
+    .tickets .conditions {
+        background: #fff;
+        padding: 40px;
+        box-sizing: border-box;
+        margin-top: 40px;
+    }
+    .tickets .conferenceplus.item {
+        padding: 40px;
+        width: calc(66.6% - 10px);
+    }
+}
