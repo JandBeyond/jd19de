@@ -2,7 +2,8 @@
 #system-message-container {
     color: white;
     .close {
-        display: inline-block;
+        // display: inline-block;
+        display: none;
         width: 40px;
         height: 40px;
         position: absolute;
