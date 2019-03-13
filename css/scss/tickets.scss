@@ -36,7 +36,7 @@
     position: relative;
     text-decoration: none !important;
     background-color: lighten($jd19de-orange, 27%);
-    border: 2px solid transparent;
+    border: 2px dotted transparent;
 }
 
 .tickets a.ticket:hover {
@@ -47,7 +47,7 @@
 .tickets a.ticket.ttid75,
 .tickets a.ticket.ttid76 {
     background-color: lighten($jd19de-blue, 27%);
-    border: 2px solid transparent;
+    border: 2px dotted transparent;
 }
 
 .tickets a.ticket.ttid75:hover,
