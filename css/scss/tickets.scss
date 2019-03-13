@@ -85,6 +85,7 @@
     background-size: 40px;
     width: calc(100% + 20px);
     margin: -10px 0px 0px -10px;
+    box-shadow: inset 0 0 200px darken($jd19de-orange, 10%);
 }
 
 .ticketfee_top {
@@ -205,6 +206,7 @@
     // background-color: #D4AF37;
     background-color: $jd19de-darkblue;
     background-image: url("../img/joomla_signet_darkblue.svg");
+    box-shadow: inset 0 0 200px $jd19de-darkblue;
 }
 
 .tickets .conferenceplus {
