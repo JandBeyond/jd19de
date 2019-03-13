@@ -44,6 +44,18 @@
     border-color: $jd19de-orange;
 }
 
+.tickets a.ticket.ttid75,
+.tickets a.ticket.ttid76 {
+    background-color: lighten($jd19de-blue, 27%);
+    border: 2px solid transparent;
+}
+
+.tickets a.ticket.ttid75:hover,
+.tickets a.ticket.ttid76:hover {
+    background-color: lighten($jd19de-blue, 18%);
+    border-color: $jd19de-blue;
+}
+
 .tickets div.ticket {
     width: 100%;
     padding: 10px;
@@ -55,6 +67,12 @@
 
 .ticket .button {
     display: block;
+    @include button($jd19de-orange, white, 'auto', 'normal');
+}
+
+.ticket.ttid75 .button,
+.ticket.ttid76 .button {
+    @include button($jd19de-blue, white, 'auto', 'normal');
 }
 
 .ticket .ticketicon {
@@ -71,7 +89,7 @@
     display: inline-block;
     width: 100%;
     position: absolute;
-    top: 0;
+    top: -2px;
     left: 0;
     text-align: center;
     font-weight: 700;
@@ -80,7 +98,7 @@
 .ticketfee_top span {
     padding: 10px 30px;
     margin: 0 auto;
-    background: #fff;
+    background-color: white;
     display: inline-block;
 }
 
@@ -152,9 +170,16 @@
 .ttid70 .ticketfee_top,
 .ttid70 .ticketfee,
 .ttid71 .ticketname,
+.ttid71 .ticketfee_top,
 .ttid71 .ticketfee,
-.ttid71 .ticketfee_top {
-    color: #D4AF37;
+.ttid75 .ticketname,
+.ttid75 .ticketfee_top,
+.ttid75 .ticketfee,
+.ttid76 .ticketname,
+.ttid76 .ticketfee,
+.ttid76 .ticketfee_top {
+    // color: #D4AF37;
+    color: $jd19de-darkblue;
 }
 
 .ttid35 .ticketicon,
@@ -172,17 +197,19 @@
 .ttid65 .ticketicon,
 .ttid66 .ticketicon,
 .ttid70 .ticketicon,
-.ttid71 .ticketicon {
-    background-color: #D4AF37;
-    background-image: url("../img/joomla_signet_gold.svg");
+.ttid71 .ticketicon,
+.ttid75 .ticketicon,
+.ttid76 .ticketicon {
+    // background-color: #D4AF37;
+    background-color: $jd19de-darkblue;
+    background-image: url("../img/joomla_signet_darkblue.svg");
 }
 
-.tickets .conferenceplus{
- background-color: rgba(255, 255, 255, .95) !important;
+.tickets .conferenceplus {
+    background-color: rgba(255, 255, 255, .95) !important;
 }
 
 .tickets .conferenceplus.item {
-   
     width: 100%;
     padding: 20px;
     box-sizing: border-box;

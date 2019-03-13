@@ -56,7 +56,7 @@ gulp.task('js', function() {
 // SERVE
 gulp.task('serve', function() {
     browserSync.init({
-        proxy: 'http://localhost/jd19de/'
+        proxy: 'http://localhost/jd19de2/'
     });
     gulp.watch('js/**/*.js', gulp.series('js', 'zip'));
     gulp.watch('css/**/*.scss', gulp.series('sass'));
