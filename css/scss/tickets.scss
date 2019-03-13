@@ -12,7 +12,8 @@
 
 .tickets article div.clearfix {
     display: flex;
-    justify-content: flex-start;
+    // justify-content: flex-start;
+    justify-content: center;
     flex-wrap: wrap;
     align-items: stretch;
 }
@@ -37,6 +38,7 @@
     text-decoration: none !important;
     background-color: lighten($jd19de-orange, 27%);
     border: 2px dotted transparent;
+    width: calc(100% - 40px);
 }
 
 .tickets a.ticket:hover {
@@ -214,19 +216,16 @@
     padding: 20px;
     box-sizing: border-box;
     h2 {
-        margin: 0;
+        margin: -20px;
         @media screen and (min-width: 768px) {
             margin: -50px -40px -60px -60px;
         }
-        // @media screen and (min-width:960px) {
-        //     margin: -10px 0 -20px -20px;
-        // }
     }
 }
 
 @media screen and (min-width: 768px) {
     .tickets a.ticket {
-        width: calc(50% - 14px);
+        width: calc(48% - 14px);
         margin-right: 20px;
     }
     .tickets a.ticket:nth-child(2n) {
@@ -244,7 +243,7 @@
 
 @media screen and (min-width: 960px) {
     .tickets a.ticket {
-        width: calc(33% - 14px);
+        width: calc(32% - 14px);
     }
     .tickets a.ticket:nth-child(2n) {
         margin-right: 20px;
@@ -267,5 +266,40 @@
     .tickets .conferenceplus.item {
         padding: 40px;
         width: calc(66.6% - 10px);
+    }
+}
+
+// selected ticket
+.selectedticket {
+    padding: 20px;
+    background-color: #eee;
+    border: 2px dotted #aaa;
+    text-align: center;
+    p strong {
+        color: $jd19de-darkblue;
+    }
+    dl {
+        dt,
+        dd {
+            margin: 0;
+            @media screen and (min-width: 768px) {
+                width: 50%;
+                margin: 0 auto;
+            }
+        }
+        dt {
+            color: #999;
+            margin-top: 20px;
+        }
+        *:nth-child(2) {
+            font-size: 1.2em;
+            line-height: 1.2em;
+            text-transform: uppercase;
+            width: 100%;
+        }
+    }
+    #fee {
+        font-weight: bold;
+        color: $jd19de-red;
     }
 }

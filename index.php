@@ -67,7 +67,6 @@ $active = $app->getMenu()->getActive();
 
         <div class="main-content">
           <article>
-            <jdoc:include type="message" />
             <jdoc:include type="component" />
           </article>
 
