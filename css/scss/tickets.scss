@@ -1,13 +1,13 @@
 // tickets
 .tickets article {
     background: 0 none !important;
-    width: calc(100% - 40px);
-    @media screen and (min-width: 768px) {
-        width: calc(100% - 80px);
-    }
-    @media screen and (min-width: 960px) {
-        width: 100%;
-    }
+    // width: calc(100% - 40px);
+    // @media screen and (min-width: 768px) {
+    //     width: calc(100% - 80px);
+    // }
+    // @media screen and (min-width: 960px) {
+    //     width: 100%;
+    // }
 }
 
 .tickets article div.clearfix {

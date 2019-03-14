@@ -17,21 +17,25 @@ footer {
         }
         &>* {
             margin: 0;
-            padding: 100px 25px 120px 25px;
+            padding: 40px 25px 40px 25px;
+            @media (min-width: 768px) {
+                padding: 100px 25px 120px 25px;
+            }
         }
         &>*:not(:last-child) {
             width: calc(100% - 50px);
             @media (min-width: 768px) {
                 width: calc(33% - 50px);
             }
-            @media (min-width: 992px) {
-                // width: calc(25% - 50px);
-            }
         }
         &>*:nth-child(2),
         &>*:nth-child(3) {
             h3 {
                 opacity: 0;
+                display: none;
+                @media (min-width: 768px) {
+                    display: block;
+                }
             }
         }
         &>*:last-child {

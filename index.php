@@ -66,13 +66,15 @@ $active = $app->getMenu()->getActive();
         <?php endif; ?>
 
         <div class="main-content">
-          <article>
+          <article class="<?php echo ($this->countModules('sidebar')) ? ('with-sidebar') : ('full-width'); ?>">
             <jdoc:include type="component" />
           </article>
-
-          <aside>
-            <jdoc:include type="modules" name="sidebar" />
-          </aside>
+          
+          <?php if ($this->countModules('sidebar')) : ?>
+            <aside>
+              <jdoc:include type="modules" name="sidebar" />
+            </aside>
+          <?php endif; ?>
         </div>
 
         <?php if (
