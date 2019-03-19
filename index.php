@@ -49,11 +49,11 @@ $active = $app->getMenu()->getActive();
     <main>
       <div class="wrap-inside">
         <?php if ($this->countModules( 'intro' )) : ?>
-          <section id="particles-nav" class="intro">
+          <section id="particles-intro" class="intro">
             <jdoc:include type="modules" name="intro" />
           </section>
         <?php else: ?>
-          <section id="particles-nav" class="logo">
+          <section id="particles-logo" class="logo">
             <a href="<?php echo Juri::base(); ?>">
               <jdoc:include type="modules" name="logo" />
             </a>
