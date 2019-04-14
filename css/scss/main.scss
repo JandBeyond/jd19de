@@ -97,7 +97,25 @@ body:not(.landingpage) article {
     }
   }
 }
-
+.btn-korall {
+	transition: all .3s linear;
+	cursor: pointer;
+	display: inline-block;
+	padding: 6px 16px;
+	margin-top: 20px;
+	text-transform: uppercase;
+	text-decoration: none !important;
+	letter-spacing: 2px;
+	width: auto;
+	background-color: #fff;
+	border: 2px dotted #ff5959;
+	color: #ff5959 !important;  
+}
+.btn-korall:hover {
+    background-color: #ff5959;
+    border-color: #fff;
+    color: #fff !important;
+}
 
 
 
