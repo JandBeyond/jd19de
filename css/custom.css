@@ -5,3 +5,152 @@
  * In best case you don't use this file.
  * It's for fast fixes in browser only.
  */
+.contact-miscinfo dl {
+	display: flex;
+	align-items: center;
+	margin: 0;
+}
+.contact-miscinfo dl dd {
+	margin-left: 15px;
+}
+.sponsoren h2 {color:#fff}
+
+.sponsor-silver h2 {color: Silver; background: transparent; padding: 0;}
+.sponsor-business h3 {color: #73a9bd }
+.sponsor-silver .sponsorlist ul li img { width: 80%; height: 100px; object-fit: contain; margin: 0 auto; }
+.sponsor-business .sponsorlist ul li img {width: 40%; height: 100px; object-fit: contain; margin: 0 auto;}
+
+.sponsor-details div.clearfix {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
+    justify-content: center;
+    -ms-flex-wrap: wrap;
+    flex-wrap: wrap;
+    -webkit-box-align: stretch;
+    -ms-flex-align: stretch;
+    align-items: stretch;
+}
+.sponsor-details .sponsor-details-item {
+    margin-top: 20px;
+    position: relative;
+    text-decoration: none !important;
+    background-color: #fff1e4;
+    width: calc(100% - 40px);
+}
+.sponsor-details .sponsor-details-item {
+    width: 100%;
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+    height: 100%;
+    text-align: center;
+    color: #212121;
+}
+@media screen and (min-width: 768px) {
+    .sponsor-details .sponsor-details-item {
+        width: calc(48% - 14px);
+        margin-right: 20px
+    }
+    .sponsor-details .sponsor-details-item:nth-child(2n) {
+        margin-right: 0px
+    }    
+}
+.sponsor-details .sponsor-details-img {
+    height: 250px;
+    background-color: #ffad5a;
+    /*background-image: url(../img/joomla_signet_gold.svg);*/
+    background-repeat: repeat;
+    background-size: 40px;
+    width: 100%;    
+    -webkit-box-shadow: inset 0 0 200px #ff9427;
+    box-shadow: inset 0 0 200px #ff9427;
+	display: flex;
+	justify-content: center;
+	align-items: center;	
+}
+
+.sponsor-details .sponsor-details-img img {
+	padding: 20px;
+}
+
+
+@media screen and (min-width: 960px) {
+    .sponsor-details .sponsor-details-item {
+        width: calc(49% - 14px)
+    }
+    .sponsor-details .sponsor-details-item:nth-child(2n) {
+        margin-right: 0px
+    }
+    .sponsor-details .sponsor-details-item:nth-child(3n) {
+        margin-right: 0px
+    }
+    .sponsor-details .sponsor-details-desc {
+        padding: 20px
+    }  
+}
+@media screen and (min-width: 960px) {
+	.sponsor-details div.sponsor-details-desc {
+    padding: 20px;
+	}
+}
+
+
+
+.sponsor-details div.sponsor-details-item {
+    text-align: center;
+    color: #212121;
+}
+.sponsor-details .sponsor-details-desc {
+    text-align: left;
+}
+
+.sponsor-details-name {
+    text-transform: uppercase;
+    font-weight: 700;
+    margin-bottom: 0;
+}
+.sponsor-details .button {
+    display: block;
+    -webkit-transition: all .3s linear;
+    transition: all .3s linear;
+    cursor: pointer;
+    display: inline-block;
+    padding: 6px 16px;
+    margin-top: 20px;
+    text-transform: uppercase;
+    text-decoration: none;
+    letter-spacing: 2px;
+    width: auto;
+    background-color: #ffad5a;
+    border: 2px dotted #fff;
+    color: #fff;
+}
+.sponsor-details .button a {
+	text-decoration: none !important;
+	color: #fff !important;
+}
+.sponsor-silver h4 {color: Silver !important;}
+.sponsor-business h4 {color: #2f5664 !important;} 
+
+.sponsor-silver .sponsor-details .sponsor-details-img {
+	background-color: #adadad;
+	box-shadow: inset 0 0 200px #f0f0f0;
+}
+.sponsor-business .sponsor-details .sponsor-details-img {
+	background-color: #2f5664;
+	box-shadow: inset 0 0 200px #73a9bd;
+}
+.sponsor-silver .sponsor-details .sponsor-details-item {
+	background-color: #f0f0f0;
+}
+.sponsor-business .sponsor-details .sponsor-details-item {
+	background-color: #73a9bd ;
+}
+.sponsor-silver .sponsor-details .button{
+	background-color: #adadad;
+}
+.sponsor-business .sponsor-details .button{
+	background-color: #2f5664;
+}
