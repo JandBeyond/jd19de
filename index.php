@@ -2,6 +2,7 @@
 
 JHtml::script(Juri::base() . 'templates/'.$this->template.'/build/app.js');
 JHtml::stylesheet(Juri::base() . 'templates/'.$this->template.'/build/style.css');
+JHtml::stylesheet(Juri::base() . 'templates/'.$this->template.'/css/custom.css');
 
 $app = JFactory::getApplication();
 $params = $app->getParams();
