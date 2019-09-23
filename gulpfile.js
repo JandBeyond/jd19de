@@ -1,5 +1,6 @@
 // VARIABLES
-const gulp = require('gulp');
+// const gulp = require('gulp');
+const { watch, series, src, dest } = require('gulp');
 const uglify = require('gulp-uglify');
 const concat = require('gulp-concat');
 const sass = require('gulp-sass');
@@ -10,24 +11,24 @@ const browserSync = require('browser-sync').create();
 const zip = require('gulp-zip');
 
 // FILES
-gulp.task('files', function() {
-    return gulp.src('node_modules/normalize.css/normalize.css')
-        .pipe(gulp.dest('css'));
-});
+function getFiles() {
+    return src('node_modules/normalize.css/normalize.css')
+        .pipe(dest('css/'));
+}
 
 // SASS
-gulp.task('sass', function() {
-    return gulp.src('css/template.scss')
+function compileSass() {
+    return src('css/template.scss')
         .pipe(sourcemaps.init())
         .pipe(sass({ outputStyle: 'compressed' }))
         .pipe(autoprefixer())
         .pipe(sourcemaps.write())
-        .pipe(gulp.dest('css'));
-});
+        .pipe(dest('css/'));
+}
 
 // CSS
-gulp.task('css', function() {
-    return gulp.src([
+function prepareCss() {
+    return src([
             'css/normalize.css',
             'css/template.css'
         ])
@@ -35,13 +36,13 @@ gulp.task('css', function() {
         .pipe(concat('style.css'))
         .pipe(cleanCSS())
         .pipe(sourcemaps.write())
-        .pipe(gulp.dest('build'))
+        .pipe(dest('build/'))
         .pipe(browserSync.stream());
-});
+}
 
 // JS
-gulp.task('js', function() {
-    return gulp.src([
+function uglifyJavascript() {
+    return src([
             'js/particles.js',
             'js/script.js'
         ])
@@ -49,31 +50,39 @@ gulp.task('js', function() {
         .pipe(uglify())
         .pipe(concat('app.js'))
         .pipe(sourcemaps.write())
-        .pipe(gulp.dest('build'))
+        .pipe(dest('build/'))
         .pipe(browserSync.stream());
-});
+}
+
+// ZIP
+function zipTemplate() {
+    return src([
+        '**/*',
+        '!node_modules/**',
+        '!dist/**'
+    ])
+        .pipe(zip('jd19de.zip'))
+        .pipe(dest('../'));
+}
 
 // SERVE
-gulp.task('serve', function() {
+function serveSite() {
     browserSync.init({
         proxy: 'http://localhost/jd19de2/'
     });
-    gulp.watch('js/**/*.js', gulp.series('js', 'zip'));
-    gulp.watch('css/**/*.scss', gulp.series('sass'));
-    gulp.watch('css/**/*.css', gulp.series('css', 'zip'));
-    gulp.watch('**/*.php', gulp.series('zip')).on('change', browserSync.reload);
-});
+    watch('js/**/*.js', series(uglifyJavascript, zipTemplate));
+    watch('css/**/*.scss', series(compileSass));
+    watch('css/**/*.css', series(prepareCss, zipTemplate));
+    watch('**/*.php', series(zipTemplate)).on('change', browserSync.reload);
+}
 
-// ZIP
-gulp.task('zip', function() {
-    return gulp.src([
-            '**/*',
-            '!node_modules/**',
-            '!dist/**'
-        ])
-        .pipe(zip('jd19de.zip'))
-        .pipe(gulp.dest('../'));
-});
 
 // DEFAULT
-gulp.task('default', gulp.series('files', 'sass', 'css', 'js', 'zip', 'serve'));
+exports.default = series(
+    getFiles,
+    compileSass,
+    prepareCss,
+    uglifyJavascript,
+    zipTemplate,
+    serveSite
+);
