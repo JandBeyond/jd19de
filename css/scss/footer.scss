@@ -19,7 +19,7 @@ footer {
             margin: 0;
             padding: 40px 25px 40px 25px;
             @media (min-width: 768px) {
-                padding: 100px 25px 120px 25px;
+                padding: 50px 25px;
             }
         }
         &>*:not(:last-child) {
@@ -40,6 +40,7 @@ footer {
         }
         &>*:last-child {
             padding-top: 0;
+			width: 100%;
             h3 {
                 display: none;
             }
@@ -104,4 +105,11 @@ footer {
             }
         }
     }
+}
+.hinweis {
+    color: lighten($jd19de-blue, 35%);
+    position: relative;
+    z-index: 2;
+    font-size: 14px;
+	padding-bottom: 120px;
 }

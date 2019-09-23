@@ -104,6 +104,11 @@ $active = $app->getMenu()->getActive();
         <jdoc:include type="modules" name="footer" style="xhtml" />
       </div>
     </footer>
+    <div class="hinweis">
+      <div class="wrap-inside">
+       <jdoc:include type="modules" name="footer2" style="xhtml" />
+      </div>
+     </div>
 
   </div>
 </body>
