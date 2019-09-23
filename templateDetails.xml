@@ -54,6 +54,7 @@
 		<position>bottom_b</position>
 		<position>bottom_c</position>
 		<position>footer</position>
+		<position>footer2</position>
 		<position>debug</position>
 	</positions>
 </extension>

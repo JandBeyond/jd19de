@@ -33,12 +33,19 @@ select {
   }
 }
 
-input[type="radio"] {
+input[type="radio"], input[type="checkbox"] {
   margin-right: 10px;
 }
 
 input[type="submit"] {
   @include button($jd19de-blue, white, 'auto', 'normal');
   width: 100%;
+}
+fieldset {
+    padding: 0;
+	border: none;
+}
+.rsform-block {
+	padding: 10px 40px;
 }
 
